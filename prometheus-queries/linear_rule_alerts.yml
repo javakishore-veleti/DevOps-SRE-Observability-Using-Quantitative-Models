@@ -1,0 +1,49 @@
+groups:
+  - name: LinearGrowthAlerts
+    interval: 1m
+    rules:
+      - alert: SteadyCPUUsageIncrease
+        expr: |
+          rate(process_cpu_seconds_total[5m]) > 0.75
+        for: 5m
+        labels:
+          severity: warning
+          team: devops
+        annotations:
+          summary: "High steady CPU usage detected"
+          description: |
+            CPU usage has been consistently above 75% for the past 5 minutes.
+            This could indicate upcoming resource exhaustion.
+            Current value: {{ $value }}
+
+      - alert: SteadyMemoryUsageIncrease
+        expr: |
+          (node_memory_MemTotal_bytes - node_memory_MemAvailable_bytes) 
+          / node_memory_MemTotal_bytes > 0.8
+        for: 5m
+        labels:
+          severity: warning
+          team: devops
+        annotations:
+          summary: "High steady memory usage detected"
+          description: |
+            Memory usage has been consistently above 80% for the past 5 minutes.
+            Consider scaling or optimizing memory usage.
+            Current value: {{ $value }}
+
+      - alert: SteadyHTTPResponseLatencyIncrease
+        expr: |
+          rate(http_request_duration_seconds_sum[5m]) 
+          / 
+          rate(http_request_duration_seconds_count[5m]) 
+          > 0.5
+        for: 5m
+        labels:
+          severity: warning
+          team: sre
+        annotations:
+          summary: "Steady HTTP latency increase detected"
+          description: |
+            Average HTTP response time has been steadily above 0.5 seconds.
+            Monitor service performance closely.
+            Current value: {{ $value }}
