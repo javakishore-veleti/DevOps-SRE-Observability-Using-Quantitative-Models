@@ -127,6 +127,18 @@ This project shows how modeling can **predict system failures**, **improve alert
 
 ---
 
+## Detailed Explanation: Why Some Models Are Less Preferred
+
+| Model Type | What Could Go Wrong | Simple Explanation |
+|:-----------|:--------------------|:-------------------|
+| **Linear** | Misses critical fast or sudden behaviors in systems with spikes. | Linear models assume steady, predictable changes. They can miss sudden problems. |
+| **Exponential** | Triggers too many false alerts if used on stable, slow-changing systems. | Exponential models react very fast. They are noisy if your system is quiet. |
+| **Power** | Shows confusing patterns if traffic or load is not strongly changing. | Power models are good under stress/load tests. For normal systems, they exaggerate changes. |
+| **Logarithmic** | Makes healthy, normal growth look strange if applied wrongly. | Log scales are useful when improvements slow down. Otherwise they distort normal trends. |
+| **Logistic** | Needs manual curve fitting, not available easily in observability tools. | Logistic models are great for capacity planning, not for real-time alerting. |
+
+---
+
 ## Acknowledgments
 
 - [Coursera: Fundamentals of Quantitative Modeling](https://www.coursera.org/learn/wharton-quantitative-modeling?specialization=finance-quantitative-modeling-analysts)
