@@ -1,7 +1,11 @@
 
 # Kibana Visualizations for DevOps and SRE Observability
 
-This folder contains Kibana visualizations focused on analyzing HTTP error rates and HTTP latency trends. These visualizations help DevOps and SRE teams apply quantitative modeling principles to real-world microservices observability.
+This folder contains Kibana visualizations focused on analyzing 
+- HTTP error rates and
+- HTTP latency trends.
+
+Above visualizations help DevOps and SRE teams apply quantitative modeling principles to real-world microservices observability.
 
 ---
 
