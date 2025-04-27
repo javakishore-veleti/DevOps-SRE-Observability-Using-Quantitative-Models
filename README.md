@@ -1,4 +1,4 @@
-# 🚀 DevOps and SRE Observability Using Quantitative Models
+# DevOps and SRE Observability Using Quantitative Models
 
 ![Built with Prometheus](https://img.shields.io/badge/Built%20With-Prometheus-orange)
 ![Built with Grafana](https://img.shields.io/badge/Built%20With-Grafana-yellowgreen)
@@ -8,7 +8,7 @@
 
 ---
 
-## 📚 Inspiration
+## Inspiration
 
 This project is inspired by the Coursera course **"Fundamentals of Quantitative Modeling"**. During my learning journey, I was fascinated by how modeling techniques could extend beyond traditional domains like finance or data science, and be applied meaningfully to **Observability of Microservices** using tools like **Kibana**, **Grafana**, and **Prometheus**.
 
