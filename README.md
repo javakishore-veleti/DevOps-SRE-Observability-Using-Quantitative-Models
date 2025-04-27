@@ -31,6 +31,44 @@ A huge thank you to the course instructors for providing a strong foundation in 
 | **Exponential** | Models rapid growth patterns (e.g., cascading failures, sudden spikes). | Good for catching sudden spikes early before they cause outages. |
 | **Logarithmic** | Models situations where early changes are big, but later changes slow down (e.g., system optimizations). | Helps visualize slowing improvements or gains clearly over time. |
 
+### Visual Guide: Growth Shapes
+
+Linear Growth (Straight Line)
+    |
+    |     /
+    |    /
+    |   /
+    |  /
+    | /
+    |/__________________
+
+Power Growth (Accelerating Curve)
+    |
+    |    __
+    |   /
+    |  /
+    | /
+    |/
+    |____________________
+
+Exponential Growth (Explosive Curve)
+    |
+    |         /
+    |       /
+    |     /
+    |   /
+    |__/
+
+Logarithmic Growth (Flattening Curve)
+    |
+    |______
+    |      \
+    |       \
+    |        \
+    |         \
+    |          \____________
+
+
 ---
 
 ## Introduction to Observability Tools
