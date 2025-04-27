@@ -9,13 +9,13 @@ This guide explains the mathematical basis for **Power Functions** and how they 
 A **Power Function** is any function that can be written as:
 
 \[
-f(x) = a \times x^b
+f(x) = a * input_x ^ b
 \]
 
 Where:
 - \( a \) = scaling factor (constant)
 - \( b \) = exponent (power)
-- \( x \) = input (independent variable)
+- \( input_x \) = input (independent variable)
 
 In simple words:  
 **The output grows at a rate that depends on the input raised to a power.**
