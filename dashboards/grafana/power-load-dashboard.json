@@ -1,0 +1,65 @@
+{
+  "title": "Power Load Degradation Observability",
+  "panels": [
+    {
+      "type": "graph",
+      "title": "Service Response Time vs Load",
+      "targets": [
+        {
+          "expr": "rate(http_request_duration_seconds_sum[5m]) / rate(http_request_duration_seconds_count[5m])",
+          "legendFormat": "Avg Response Time",
+          "interval": ""
+        },
+        {
+          "expr": "rate(http_requests_total[5m])",
+          "legendFormat": "HTTP Requests/sec",
+          "interval": ""
+        }
+      ],
+      "yaxes": [
+        {
+          "format": "s",
+          "label": "Response Time (s)",
+          "logBase": 1
+        },
+        {
+          "format": "ops",
+          "label": "Request Rate",
+          "logBase": 1
+        }
+      ],
+      "description": "Compare average response time growth against request load to identify power degradation patterns."
+    },
+    {
+      "type": "graph",
+      "title": "CPU Saturation vs Traffic",
+      "targets": [
+        {
+          "expr": "rate(process_cpu_seconds_total[5m])",
+          "legendFormat": "CPU Usage",
+          "interval": ""
+        },
+        {
+          "expr": "rate(http_requests_total[5m])",
+          "legendFormat": "HTTP Requests/sec",
+          "interval": ""
+        }
+      ],
+      "yaxes": [
+        {
+          "format": "percent",
+          "label": "CPU Usage (%)",
+          "logBase": 1
+        },
+        {
+          "format": "ops"
+        }
+      ],
+      "description": "Visualize how CPU usage grows with incoming traffic. Detect if CPU usage accelerates faster than request growth."
+    }
+  ],
+  "timezone": "browser",
+  "schemaVersion": 30,
+  "version": 1,
+  "refresh": "30s"
+}
