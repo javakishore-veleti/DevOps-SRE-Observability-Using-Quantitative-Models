@@ -9,7 +9,7 @@ This guide explains the mathematical basis for **Logarithmic Functions** and how
 A **Logarithmic Function** is any function of the form:
 
 \[
-f(x) = a \times \log_b(x) + c
+f(x) = a * log_b(x) + c
 \]
 
 Where:
