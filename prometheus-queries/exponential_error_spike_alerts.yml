@@ -1,0 +1,20 @@
+groups:
+  - name: ExponentialErrorSpikeAlerts
+    interval: 1m
+    rules:
+      - alert: ExponentialErrorSpikeDetected
+        expr: |
+          increase(http_requests_total{status=~"5.."}[5m])
+          / 
+          increase(http_requests_total{status=~"2..|3..|4.."}[5m])
+          > 0.05
+        for: 2m
+        labels:
+          severity: critical
+          team: sre
+        annotations:
+          summary: "High rate of 5xx errors detected (possible cascading failure)"
+          description: |
+            Error rate of 5xx responses is growing faster than normal. 
+            Investigate potential application crashes or cascading failure scenarios.
+            Current value: {{ $value }}
