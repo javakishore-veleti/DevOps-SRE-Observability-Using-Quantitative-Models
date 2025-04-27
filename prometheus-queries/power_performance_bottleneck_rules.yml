@@ -1,0 +1,41 @@
+groups:
+  - name: PowerPerformanceBottleneckAlerts
+    interval: 1m
+    rules:
+      - alert: LatencyGrowingFasterThanTraffic
+        expr: |
+          (
+            rate(http_request_duration_seconds_sum[5m])
+            /
+            rate(http_request_duration_seconds_count[5m])
+          )
+          /
+          rate(http_requests_total[5m])
+          > 0.005
+        for: 3m
+        labels:
+          severity: critical
+          team: sre
+        annotations:
+          summary: "Detected latency growing disproportionately compared to traffic"
+          description: |
+            Average HTTP response time is increasing faster than request traffic.
+            Indicates early signs of system bottlenecks or performance degradation.
+            Current value: {{ $value }}
+
+      - alert: CPUUsageGrowingFasterThanTraffic
+        expr: |
+          rate(process_cpu_seconds_total[5m])
+          /
+          rate(http_requests_total[5m])
+          > 0.002
+        for: 3m
+        labels:
+          severity: critical
+          team: devops
+        annotations:
+          summary: "Detected CPU usage growing disproportionately compared to traffic"
+          description: |
+            CPU consumption is growing faster than incoming request load.
+            Potential risk of resource exhaustion or inefficient scaling behavior.
+            Current value: {{ $value }}
