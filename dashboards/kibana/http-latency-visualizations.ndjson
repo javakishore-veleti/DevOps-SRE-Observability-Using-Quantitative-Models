@@ -1,0 +1,3 @@
+{"type":"lens","attributes":{"title":"Average HTTP Response Time","visualizationType":"lnsXY","state":{...},"references":[]}}
+{"type":"lens","attributes":{"title":"P90 vs P99 Latency Trends","visualizationType":"lnsXY","state":{...},"references":[]}}
+{"type":"lens","attributes":{"title":"Latency by HTTP Method","visualizationType":"lnsXY","state":{...},"references":[]}}
