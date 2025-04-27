@@ -16,13 +16,13 @@ A huge thank you to the course instructors for providing a strong foundation in 
 
 ---
 
-## ✅ Assumptions
+## Assumptions
 
 - You are already capturing **HTTP Access Logs** and **Application Logs** from your microservices built in **Java**, **.NET**, **Python**, **Node.js**, or **Scala**.
 
 ---
 
-## 🎯 Introduction to Modeling Types
+## Introduction to Modeling Types
 
 | Model Type | Purpose | Why This Model Type |
 |------------|---------|---------------------|
@@ -33,7 +33,7 @@ A huge thank you to the course instructors for providing a strong foundation in 
 
 ---
 
-## 🛠️ Introduction to Observability Tools
+## Introduction to Observability Tools
 
 | Tool            | Purpose |
 |-----------------|---------|
@@ -43,7 +43,7 @@ A huge thank you to the course instructors for providing a strong foundation in 
 
 ---
 
-## 🎯 Objective
+## Objective
 
 - **Bridge academic modeling concepts** to **practical observability** challenges.
 - **Apply Linear, Power, Exponential, Logarithmic models** to real microservices monitoring.
@@ -51,7 +51,7 @@ A huge thank you to the course instructors for providing a strong foundation in 
 
 ---
 
-## 🔎 Actions for Microservices Developers and DevOps Engineers
+## Actions for Microservices Developers and DevOps Engineers
 
 | Model Type | Developer Actions | DevOps/Observability Actions | Why This Matters |
 |------------|--------------------|------------------------------|------------------|
@@ -62,7 +62,7 @@ A huge thank you to the course instructors for providing a strong foundation in 
 
 ---
 
-## 🛠️ How to Use HTTP Access Logs and Application Logs for Modeling
+## How to Use HTTP Access Logs and Application Logs for Modeling
 
 | Log Source | Key Fields | Application | Example Usage |
 |------------|------------|--------------|---------------|
@@ -71,7 +71,7 @@ A huge thank you to the course instructors for providing a strong foundation in 
 
 ---
 
-## 📈 Mathematical Functions Using Tool Native Capabilities
+## Mathematical Functions Using Tool Native Capabilities
 
 | Model Type | Prometheus (PromQL) | Grafana (Visualization) | Kibana (Runtime/Visual Builder) |
 |------------|---------------------|--------------------------|---------------------------------|
@@ -82,7 +82,7 @@ A huge thank you to the course instructors for providing a strong foundation in 
 
 ---
 
-## 🎯 Why Specific Models Are Recommended Over Others
+## Why Specific Models Are Recommended Over Others
 
 | Model Type | Why Recommended | Why Others Are Less Preferred |
 |------------|------------------|-------------------------------|
@@ -94,7 +94,7 @@ A huge thank you to the course instructors for providing a strong foundation in 
 
 ---
 
-## 🛠️ Native Capabilities vs Custom Ideas
+## Native Capabilities vs Custom Ideas
 
 | Tool | Native Capabilities | Custom Creative Uses |
 |------|----------------------|----------------------|
@@ -104,7 +104,7 @@ A huge thank you to the course instructors for providing a strong foundation in 
 
 ---
 
-## 🚀 Where My Research Adds Unique Value
+## Where My Research Adds Unique Value
 
 This project shows how modeling can **predict system failures**, **improve alerting**, and **optimize monitoring** by:
 
@@ -114,7 +114,7 @@ This project shows how modeling can **predict system failures**, **improve alert
 
 ---
 
-## 🔑 Key Log Fields for Observability Modeling
+## Key Log Fields for Observability Modeling
 
 | Log Field | Why Important |
 |-----------|----------------|
@@ -127,19 +127,10 @@ This project shows how modeling can **predict system failures**, **improve alert
 
 ---
 
-## 📜 Acknowledgments
+## Acknowledgments
 
 - [Coursera: Fundamentals of Quantitative Modeling](https://www.coursera.org/learn/wharton-quantitative-modeling?specialization=finance-quantitative-modeling-analysts)
 - Prometheus, Grafana, Kibana, ElasticSearch open-source communities.
 
 ---
-
-## 📄 License
-
-This project is licensed under the **MIT License**.  
-See [LICENSE](LICENSE) file for details.
-
----
-
-## 🚀 Let's Build Smarter Observability Together!
 
