@@ -1,0 +1,71 @@
+{
+  "title": "Exponential Failure Alerts",
+  "panels": [
+    {
+      "type": "graph",
+      "title": "5xx Error Rate Over Time",
+      "targets": [
+        {
+          "expr": "rate(http_requests_total{status=~\"5..\"}[5m])",
+          "legendFormat": "5xx Errors",
+          "interval": ""
+        }
+      ],
+      "yaxes": [
+        {
+          "format": "short",
+          "label": "Requests/sec",
+          "logBase": 1
+        },
+        {
+          "format": "short"
+        }
+      ],
+      "thresholds": [
+        {
+          "colorMode": "critical",
+          "line": true,
+          "value": 0.05, 
+          "op": "gt",
+          "fill": true
+        }
+      ],
+      "description": "Monitor sudden increase in 5xx error rates. Alerts when rate grows sharply."
+    },
+    {
+      "type": "graph",
+      "title": "Application Exceptions Rate",
+      "targets": [
+        {
+          "expr": "rate(application_exceptions_total[5m])",
+          "legendFormat": "Exceptions",
+          "interval": ""
+        }
+      ],
+      "yaxes": [
+        {
+          "format": "short",
+          "label": "Exceptions/sec",
+          "logBase": 1
+        },
+        {
+          "format": "short"
+        }
+      ],
+      "thresholds": [
+        {
+          "colorMode": "critical",
+          "line": true,
+          "value": 0.02,
+          "op": "gt",
+          "fill": true
+        }
+      ],
+      "description": "Track application error exceptions. Alerts when exception rates grow exponentially."
+    }
+  ],
+  "timezone": "browser",
+  "schemaVersion": 30,
+  "version": 1,
+  "refresh": "30s"
+}
