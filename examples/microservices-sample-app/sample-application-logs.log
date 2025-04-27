@@ -1,0 +1,20 @@
+2025-04-26 10:35:12.345 INFO  [UserService] - Received GET request for /api/users/123
+2025-04-26 10:35:12.348 INFO  [UserService] - Successfully fetched user details for ID 123
+2025-04-26 10:35:13.222 INFO  [OrderService] - Processing POST request to /api/orders
+2025-04-26 10:35:13.229 WARN  [InventoryService] - Low stock detected for Product ID 987
+2025-04-26 10:35:13.532 INFO  [PaymentService] - Initiating payment for Order ID 456
+2025-04-26 10:35:14.142 ERROR [PaymentService] - Payment failed for Order ID 456 due to gateway timeout
+java.net.SocketTimeoutException: Read timed out
+    at com.payment.gateway.PaymentProcessor.process(PaymentProcessor.java:85)
+    at com.payment.gateway.PaymentProcessor.processPayment(PaymentProcessor.java:45)
+    at com.microservices.PaymentService.initiatePayment(PaymentService.java:123)
+    at com.microservices.PaymentController.processOrder(PaymentController.java:88)
+2025-04-26 10:35:15.001 INFO  [NotificationService] - Sending email notification for failed payment on Order ID 456
+2025-04-26 10:35:16.750 INFO  [UserService] - Received GET request for /api/users/789
+2025-04-26 10:35:16.755 ERROR [UserService] - User not found for ID 789
+org.springframework.dao.EmptyResultDataAccessException: No entity found for query
+    at com.microservices.repository.UserRepository.findById(UserRepository.java:102)
+    at com.microservices.UserService.getUser(UserService.java:67)
+    at com.microservices.UserController.getUser(UserController.java:54)
+2025-04-26 10:35:18.354 INFO  [HealthCheckController] - System health check passed
+2025-04-26 10:35:20.127 INFO  [AuthService] - Authentication successful for user email@example.com
