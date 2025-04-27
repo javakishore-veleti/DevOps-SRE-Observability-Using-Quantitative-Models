@@ -33,7 +33,7 @@ A huge thank you to the course instructors for providing a strong foundation in 
 
 ### Visual Guide: Growth Shapes
 
-![Visual Guide - Growth Shapes](./visual-guide-growth-shapes.png)
+![Visual Guide - Growth Shapes](Visual Guide - Growth Shapes.png)
 
 ---
 
