@@ -33,41 +33,7 @@ A huge thank you to the course instructors for providing a strong foundation in 
 
 ### Visual Guide: Growth Shapes
 
-Linear Growth (Straight Line)
-    |
-    |     /
-    |    /
-    |   /
-    |  /
-    | /
-    |/__________________
-
-Power Growth (Accelerating Curve)
-    |
-    |    __
-    |   /
-    |  /
-    | /
-    |/
-    |____________________
-
-Exponential Growth (Explosive Curve)
-    |
-    |         /
-    |       /
-    |     /
-    |   /
-    |__/
-
-Logarithmic Growth (Flattening Curve)
-    |
-    |______
-    |      \
-    |       \
-    |        \
-    |         \
-    |          \____________
-
+![Visual Guide - Growth Shapes](./visual-guide-growth-shapes.png)
 
 ---
 
