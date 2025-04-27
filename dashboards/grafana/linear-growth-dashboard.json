@@ -1,0 +1,102 @@
+{
+  "title": "Linear Growth Observability",
+  "panels": [
+    {
+      "type": "graph",
+      "title": "CPU Usage Trend",
+      "targets": [
+        {
+          "expr": "rate(process_cpu_seconds_total[5m])",
+          "legendFormat": "CPU Usage",
+          "interval": ""
+        }
+      ],
+      "yaxes": [
+        {
+          "format": "percent",
+          "label": "CPU Usage (%)",
+          "logBase": 1
+        },
+        {
+          "format": "short"
+        }
+      ],
+      "thresholds": [
+        {
+          "colorMode": "warning",
+          "line": true,
+          "value": 0.75,
+          "op": "gt",
+          "fill": true
+        }
+      ],
+      "description": "Monitor CPU usage growth over time for linear steady increase."
+    },
+    {
+      "type": "graph",
+      "title": "HTTP Request Volume (Linear Trend)",
+      "targets": [
+        {
+          "expr": "rate(http_requests_total[5m])",
+          "legendFormat": "HTTP Requests/sec",
+          "interval": ""
+        }
+      ],
+      "yaxes": [
+        {
+          "format": "ops",
+          "label": "Requests/sec",
+          "logBase": 1
+        },
+        {
+          "format": "short"
+        }
+      ],
+      "thresholds": [
+        {
+          "colorMode": "warning",
+          "line": true,
+          "value": 100,
+          "op": "gt",
+          "fill": true
+        }
+      ],
+      "description": "Track steady growth in incoming HTTP requests over time."
+    },
+    {
+      "type": "graph",
+      "title": "Memory Usage Trend",
+      "targets": [
+        {
+          "expr": "rate(node_memory_MemTotal_bytes[5m]) - rate(node_memory_MemFree_bytes[5m])",
+          "legendFormat": "Memory Usage",
+          "interval": ""
+        }
+      ],
+      "yaxes": [
+        {
+          "format": "bytes",
+          "label": "Memory Usage",
+          "logBase": 1
+        },
+        {
+          "format": "short"
+        }
+      ],
+      "thresholds": [
+        {
+          "colorMode": "critical",
+          "line": true,
+          "value": 0.85,
+          "op": "gt",
+          "fill": true
+        }
+      ],
+      "description": "Visualize memory usage over time for linear increase patterns."
+    }
+  ],
+  "timezone": "browser",
+  "schemaVersion": 30,
+  "version": 1,
+  "refresh": "30s"
+}
